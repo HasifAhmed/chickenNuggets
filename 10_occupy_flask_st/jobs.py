@@ -7,8 +7,8 @@ def homepage():
     return "This is the homepage"
 
 @app.route('/occupations')
-def joblist(hello = None, foo = None  ):
-    return render_template('occ.html', hello = "hello", foo = "foo")
+def joblist():
+    return render_template('occ.html')
 
 app.debug = True
 app.run()
