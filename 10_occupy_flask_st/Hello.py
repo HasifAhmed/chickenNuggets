@@ -1,3 +1,8 @@
+#Indeed: Sarar Aseer, Hasif Ahmed
+#SoftDev1 pd8
+#K10 -- Jinja Tuning
+#2018-09-24
+
 import os
 import random
 import csv
@@ -14,7 +19,8 @@ def homepage():
 @app.route('/occupations')
 def joblist():
     return render_template("occ.html",
-                           title = "Title",
+                           title = "Jobs",
+                           title2 = "Percentages",
                            dictjobs = rme.read("csvv.csv"),
                            random = rme.retjob("csvv.csv")
                            )
