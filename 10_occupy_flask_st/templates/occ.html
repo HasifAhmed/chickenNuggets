@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	  <title> {{Title}} </title>
+	</head>
+	
+	<body>
+	  <p> {{random}} </p>
+	  <table>
+	  {% for j,p in dictjobs.items() %}
+	  <tr>
+	    <th>
+	      {{ j }}
+	    </th>
+	    <th>
+	      {{ p }}
+	    </th>
+	  </tr>
+	  {% endfor %}
+	  </table>
+	</body>
+
+</html>
