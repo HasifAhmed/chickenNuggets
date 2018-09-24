@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def homepage():
-    return render_template("occ.html", var1=file)
+    return "Indeed."
 
 @app.route('/occupations')
 def joblist():
