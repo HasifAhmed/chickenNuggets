@@ -3,8 +3,6 @@
 #K10 -- Jinja Tuning
 #2018-09-24
 
-import os
-import random
 import csv
 from flask import Flask, render_template
 import rme
