@@ -1,3 +1,4 @@
+
 #Indeed: Sarar Aseer, Hasif Ahmed
 #SoftDev1 pd8
 #K10 -- Jinja Tuning
@@ -5,7 +6,7 @@
 
 import csv
 from flask import Flask, render_template
-import rme
+from util import rme
 
 app = Flask(__name__)
 
