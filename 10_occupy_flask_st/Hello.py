@@ -19,9 +19,9 @@ def homepage():
 def joblist():
     return render_template("occ.html",
                            title = "Jobs",
-                           title2 = "Percentages",
-                           dictjobs = rme.read("csvv.csv"),
-                           random = rme.retjob("csvv.csv")
+                           heading = "The purpose of this website is to select a random occupation from the table below and display it.",
+                           dictjobs = rme.read("data/csvv.csv"),
+                           random = rme.retjob("data/csvv.csv")
                            )
 
 if __name__ == "__main__":

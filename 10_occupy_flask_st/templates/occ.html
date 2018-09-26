@@ -1,32 +1,27 @@
 <!DOCTYPE html> 
 <html> 
   <head>
-	  <title> {{Title}} </title>
-	  <h1>     <h1>
-	</head>
+	<title> {{title}} </title>
+	<h3> {{ heading }} </h3>
+	  
+  </head>
 	
-	<body>
-	  <p> <b> Job: </b> {{random}} </p>
-	  <table>
+     <body>
+
+	  <p> 	<b> Job: </b> {{random}}  </p>
+	  
+	<table>
 	  <tr>
-	    <th>
-	      {{ title }}
-	    </th>
-	    <th>
-	      {{ title2 }}
-	    </th>
+	      <th> Occupation </th>
+	   	 <th> Percentage </th>
 	  </tr>
 	  {% for j,p in dictjobs.items() %}
 	  <tr>
-	    <td>
-	      {{ j }}
-	    </td>
-	    <td>
-	      {{ p }}
-	    </td>
+	    <td> {{ j }} </td>
+	    <td> {{ p }} </td>
 	  </tr>
 	  {% endfor %}
-	  </table>
-	</body>
+	</table>
+     </body>
 
 </html>
