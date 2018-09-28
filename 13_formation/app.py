@@ -10,15 +10,15 @@ def homepage():
                            inputype = "Username: "
                            )
 
-@app.route('/greetings')
+@app.route('/greetings', methods = ["GET","POST"])
 def greet():
     print(app)
     print(request)
     print(request.method)
-    print(request.args)
+    print(request.form)
     return render_template("greeting.html",
                            title = "Greetings",
-                           head = "Greetings " + request.args['username'] + "!",
+                           head = "Greetings " + request.form['username'] + "!",
                            inputype = "The method type is: " + request.method
                            )
                            
