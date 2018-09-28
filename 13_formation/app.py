@@ -18,7 +18,7 @@ def greet():
     print(request.args)
     return render_template("greeting.html",
                            title = "Greetings",
-                           head = "Greetings " + request.args.get('username') + "!",
+                           head = "Greetings " + request.args['username'] + "!",
                            inputype = "The method type is: " + request.method
                            )
                            
