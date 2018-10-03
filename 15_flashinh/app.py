@@ -1,7 +1,7 @@
 # azrael - Jason Tung and Hasif Ahmed
 # SoftDev1 pd8
-# K14 -- Do I Know You?
-# 2018-10-02
+# K15 -- Oh yes, perhaps I do...
+# 2018-10-03
 import string, random, os
 
 from flask import Flask, url_for, render_template, request, session, redirect, flash
@@ -13,7 +13,7 @@ acc = {'Ahmed': 'Tung'} #dictionary to hold user and pass
 @app.route('/')
 def hello_world():
     if 'Ahmed' in session: #if ahmed is currently saved 
-        return render_template('yes.html',usr = 'Ahmed', error = False) #welcome file 
+        return render_template('yes.html',usr = 'Ahmed') #welcome file
     return render_template('login.html') #login file 
 
 @app.route('/auth', methods=['POST'])
@@ -22,17 +22,18 @@ def hello_world2():
     if request.form['username'] in acc: 
         if request.form['password'] == 'Tung':
             session['Ahmed'] = 'Tung'
-            flash('Success!')
-            return render_template('yes.html',error = False,usr = 'Ahmed')
+            flash('Success! Logged in as Ahmed', 'success')
+            return render_template('yes.html',usr = 'Ahmed')
         else:
-            flash('Incorrect Password!')
-            return render_template('login.html',error = True)
-    flash('Incorrect Username!')
-    return render_template('login.html',error = True) 
+            flash('Incorrect Password!', 'error')
+            return render_template('login.html')
+    flash('Incorrect Username!', 'error')
+    return render_template('login.html')
 
 @app.route('/logout')
 def out():
-    session.pop('Ahmed',None) #need none in case theres no 'Ahmed' to pop out 
+    session.pop('Ahmed',None) #need none in case theres no 'Ahmed' to pop out
+    flash("Succesfully logged out", "success")
     return redirect(url_for('hello_world'))
 
 if __name__ == "__main__":

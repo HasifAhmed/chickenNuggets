@@ -3,13 +3,6 @@
     login
 {%endblock%}
 
-{% block response %}
- {% if error %}
-    {% set msgs = get_flashed_messages() %}
-      {{ msgs[0] }}
- {% endif %}
-{% endblock %} 
-
 {% block body %}
     <h2>WEEEEEEEEEEEEEEEEE</h2>
     <form action="/auth" method="POST">
