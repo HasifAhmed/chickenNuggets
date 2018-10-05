@@ -1,5 +1,5 @@
-#Clyde "Thluffy" Sinclair
-#SoftDev1 pd0
+#Lonely:(Hasif Ahmed and no one else) 
+#SoftDev1 pd8
 #SQLITE3 BASICS
 #2018-10-04
 
