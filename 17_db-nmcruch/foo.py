@@ -5,6 +5,7 @@
 import copy
 import sqlite3  # enable control of an sqlite database
 import csv  # facilitates CSV I/O
+import os
 
 DB_FILE = "discobandit.db"
 
@@ -27,7 +28,8 @@ def createtable(filename, tablename):
         command = "DROP TABLE IF EXISTS {0};".format(tablename)
         #print(command)
         c.execute(command)
-        command = "CREATE TABLE IF NOT EXISTS {0}(".format(tablename)
+        command = "CREATE TABLE IF NOT EXISTS {0}".format(tablename)
+        command += "("
         for keys in headers:
                 command+= keys + " BLOB,"
         command = command[:-1]+ ");"
@@ -47,16 +49,27 @@ def createtable(filename, tablename):
             command = "INSERT INTO {0}({1}) VALUES({2});".format(tablename,headerstr, vals)
             #print(command)
             c.execute(command)
-        c.execute("SELECT * FROM {0};".format(tablename))
+        #c.execute("SELECT * FROM {0};".format(tablename))
     # --------------------------------------------------------------------------------------------------
 
 # ==========================================================
-createtable('peeps.csv', 'peeps_info')
-
+createtable("peeps.csv", 'peeps_info')
 createtable('courses.csv', 'courses_info')
 
+db.commit()  # save changes
+db.close()  # close database
 
+db = sqlite3.connect(DB_FILE)
+c = db.cursor()
 
+def createDict():
+    DICT = {}
+    info = {}
+    c.execute("SELECT name, peeps_info.id, mark FROM peeps_info, courses_info WHERE peeps_info.id = courses_info.id;")
+    
+    
+
+createDict() 
 db.commit()  # save changes
 db.close()  # close database
 
