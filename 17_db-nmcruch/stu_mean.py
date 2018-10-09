@@ -64,41 +64,51 @@ db = sqlite3.connect(DB_FILE)  # open if file exists, otherwise create
 c = db.cursor()  # facilitate db ops
 
 def createAvgtbl():
-    avg = {} 
-    count = []
-    
-    names = c.execute("SELECT name FROM peeps_info;") #pull the names of the students and put them into a list
-    for n in names:
-        #print(n[0]) #testing
-        count.append(n[0])
+    peeps_dict ={}
 
-    for name in count: #iterate through the list of names 
-        total = 0
-        num = 0.0
-        #Have to execute every single time you want to iterate through the following data, or else it doesnt work
-        info = c.execute("SELECT name, peeps_info.id, mark FROM peeps_info, courses_info WHERE peeps_info.id = courses_info.id;")
-        for row in info: #iterate through the data
-            if(name == row[0]): #if the name from the list matches the name from the row
-                #print("Hello") #testing
-                total += int(row[2]) #calculate the sum
-                num += 1.0
-        if( num != 0): #to avoid dividing by 0
-            total /= num #calculate avg
-            avg[name] = total #put into the dictionary
-            #print(avg[name]) #testing
-            
-    c.execute("CREATE TABLE IF NOT EXISTS peeps_avg(name BLOB, average BLOB);") #create peeps_avg
-    for k,v in avg.items(): #iterate through dictrionary with items() so u can access key and value 
-        vals = ""
-        vals += "'{0}'".format(k) + "," + "'{0}'".format(v) #what you are inputting 
-        command = "INSERT INTO peeps_avg VALUES({0});".format(vals) #insert them 
+    info = c.execute(
+        "SELECT name, peeps_info.id, mark FROM peeps_info, courses_info WHERE peeps_info.id = courses_info.id;")
+    for list in info: #iterate through the list of names
+        name = str(list[0])
+        id = int(list[1])
+        grade = float(list[2])
+        if name not in peeps_dict:
+            s_dict = {}
+            s_dict["id"] = id
+            s_dict["tot_grades"] = grade
+            s_dict["classes"] = 1
+            peeps_dict[name] = s_dict
+        else:
+            peeps_dict[name]["tot_grades"] += grade
+            peeps_dict[name]["classes"] += 1
+        peeps_dict[name]["avg"] = peeps_dict[name]["tot_grades"]/s_dict["classes"]
+    command = "DROP TABLE IF EXISTS {0};".format("peeps_avg")
+    c.execute(command)
+    c.execute("CREATE TABLE IF NOT EXISTS peeps_avg(id INTEGER, name TEXT, average DECIMAL);") #create peeps_avg
+    for k,v in peeps_dict.items(): #iterate through dictrionary with items() so u can access key and value
+        name = k;
+        id = v["id"]
+        avg = v["avg"]
+        command = "INSERT INTO peeps_avg VALUES({id},'{name}',{avg});".format(id = id, name = name, avg = avg) #insert them
+        #rprint(command)
         c.execute(command) #execute command 
-    
-        
-    
+
+def printTable(name):
+    c.execute('SELECT * FROM {name}'.format(name=name))
+    print(c.fetchall())
+
+def addStuff(code, id, mark):
+    c.execute("INSERT INTO courses_info VALUES('{code}','{id}','{mark}')".format(code = code,id = id,mark = mark))
     
 
 createAvgtbl()
+print("peeps_avg:")
+printTable("peeps_avg")
+print("courses after adding 1000 to tiesto:")
+addStuff("bicycle eating", "5", "1000")
+createAvgtbl()
+printTable("courses_info")
+printTable("peeps_avg")
 db.commit()  # save changes
 db.close()  # close database
 
