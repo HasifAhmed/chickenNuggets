@@ -1,0 +1,46 @@
+* {
+    font-family: Arial; 
+    font-weight: 600;
+}
+
+#container {
+    border: #666666 solid 7px;
+    background-color: #757575;
+    width: 900px;
+    height: 407px;
+}
+
+h1 {
+    color:white; text-align: center; 
+    background: #bdbdbd; 
+    padding: 5px;
+    margin-top: 0;
+}
+
+#nav {
+    float: left; 
+    width: 15%; 
+    padding-left: 10px;
+}
+
+#nav ul {
+    list-style: none; 
+    padding: 0;
+}
+
+#nav a {
+    color: white; 
+    text-decoration: none;
+}
+
+#content {
+    overflow: auto;
+}
+
+#footer {
+    background: #575757; 
+    color: #75746c; 
+    text-align: right; 
+    padding: 10px 10px; 
+    font-weight: normal;
+}

@@ -2,26 +2,109 @@
 <!-- WORK FILE for CSS --> 
 
 <html>
-  <head>
-    <title>foo title</title>
-  </head>
+    <head>
+        <title>foo title</title>
 
-  <body>
-    <h1>foo heading 1</h1>
-    <h3>nav foo</h3>
-    <ul>
-      <li><a href="">dis</a></li>
-      <li><a href="">dat</a></li>
-      <li><a href="">de udda ting</a></li>
-    </ul>
-    <h2>main foo heading</h2>
-    <p>tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk 
+        <style>
+        
+            * {
+                font-family: Arial; 
+                font-weight: 600;
+            }
 
-      <br>
-      <br>
+            #container {
+                border: #666666 solid 7px;
+                background-color: #757575;
+                width: 900px;
+                height: 407px;
+            }
 
-      Copyright &copy; 2016 Clyde "Thluffy" Sinclair
+            h1 {
+                color:white; text-align: center; 
+                background: #bdbdbd; 
+                padding: 5px;
+                margin-top: 0;
+            }
 
-  </body>
+            #nav {
+                float: left; 
+                width: 15%; 
+                padding-left: 10px;
+            }
+
+            #nav ul {
+                list-style: none; 
+                padding: 0;
+            }
+
+            #nav a {
+                color: white; 
+                text-decoration: none;
+            }
+
+            #content {
+                overflow: auto;
+            }
+
+            #footer {
+                background: #575757; 
+                color: #75746c; 
+                text-align: right; 
+                padding: 10px 10px; 
+                font-weight: normal;
+            }
+        
+        </style>
+
+    </head>
+
+    <body>
+        <div id="container">
+
+            <h1>h1 foo</h1>
+            
+            <div id="nav">
+
+                <h3>nav foo</h3>
+                <ul>
+                <li><a href="">dis</a></li>
+                <li><a href="">dat</a></li>
+                <li><a href="">de udda ting</a></li>
+                </ul> 
+
+            </div>
+            
+            <div id="content">
+
+                <h2>main foo heading</h2>
+                <p>
+                    Cupcake ipsum dolor sit amet fruitcake dragee jelly-o cookie. Macaroon chocolate bar pastry jujubes. 
+                    Donut powder tootsie roll. Sweet roll chocolate bar sesame snaps jelly-o chocolate bar. 
+                    Jujubes bear claw topping carrot cake. Danish chupa chups sweet roll oat cake toffee cookie. 
+                    Jelly-o liquorice cake bonbon cake sugar plum sweet roll.
+                    <br>
+                    <br>
+                    Apple pie caramels liquorice cheesecake apple pie. 
+                    Donut topping candy canes fruitcake lollipop cupcake bear claw candy sweet roll. 
+                    Chocolate dessert carrot cake cupcake sweet brownie lollipop candy canes. 
+                    Halvah tootsie roll cupcake sweet cake powder. 
+                    Biscuit apple pie cheesecake tiramisu cheesecake toffee jelly beans. 
+                    Powder gingerbread croissant sweet roll pudding. 
+                    Cake croissant souffle cheesecake.
+                </p>
+
+                <br>
+                <br>
+
+            </div>
+            
+            <div id="footer">
+                Copyright &copy; 2016 Clyde "Thluffy" Sinclair
+            </div>
+
+        </div>
+        
+
+    </body>
 
 </html>
