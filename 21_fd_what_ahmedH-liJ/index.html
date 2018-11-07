@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Foundation </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/css/foundation-float.css">
+</head>
+<body>
+
+    <div class = "top-bar">
+      <div class = "top-bar-left">
+        <ul class = "menu" data-magellan >
+          <li class = "menu-text">Top Bar</li>
+          <li><a href="#button">Buttons</a></li>
+          <li><a href="#switches">Switches</a></li>
+          <li><a href="#pagination">Pagination</a></li>
+          <li><a href="#tooltip">Tooltip</a></li>
+        </ul>
+      </div>
+      <div class = "top-bar-right">
+        <ul class = "menu">
+          <li><input type = "search" placeholder = "Right Side"></li>
+          <li><button type = "button" class = "button">Search</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 id= "button" data-magellan-target = "first"> Button </h3>
+    <a href="#" class="button"> This is a normal button </a>
+    <a href="#" class="success button"> This is a "success" button </a>
+    <a href="#" class="alert button"> This is an "alert" button </a>
+    <br>
+    <h5> Buttons sizes. Has sizes: tiny, small, large, and just 'button'</h5>
+    <a href="#" class="button tiny"> This is a tiny button </a>
+    <a href="#" class="button small"> This is a small button </a>
+    <a href="#" class="button"> This is a button button </a>
+    <a href="#" class="button large"> This is a large button </a>
+
+    <br>
+    <br>
+
+    <h3 id= "switches" data-magellan-target = "switches"> Switches </h3>
+    <h5> toggle </h5>
+    <div class="switch">
+        <input class="switch-input" id="toggleSwitch" type="checkbox" name="toggleSwitch">
+        <label class="switch-paddle" for="toggleSwitch">
+            <!-- only label tag is needed; span isn't -->
+            <span class="show-for-sr"> TOGGLE </span>
+        </label>
+    </div>
+    <h5> choice </h5>
+    <div class="switch">
+        <input class="switch-input" id="choice1" type="radio" checked name="choices">
+        <label class="switch-paddle" for="choice1"></label>
+    </div>
+
+    <div class="switch">
+        <input class="switch-input" id="choice2" type="radio" name="choices">
+        <label class="switch-paddle" for="choice2"></label>
+    </div>
+
+    <div class="switch">
+        <input class="switch-input" id="choice3" type="radio" name="choices">
+        <label class="switch-paddle" for="choice3"></label>
+    </div>
+
+    <br>
+    <br>
+
+    <h3 id = "pagination" data-magellan-target = "pagination">Pagination</h3>
+    <nav aria-label="Pagination">
+      <ul class="pagination">
+        <li class="pagination-previous"><a href="#" aria-label="Previous page">Previous <span class="show-for-sr">page</span></a></li>
+        <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+        <li><a href="#" aria-label="Page 2">2</a></li>
+        <li><a href="#" aria-label="Page 3">3</a></li>
+        <li><a href="#" aria-label="Page 4">4</a></li>
+        <li><a href="#" aria-label="Page 5">5</a></li>
+        <li><a href="#" aria-label="Page 6">6</a></li>
+        <li class="pagination-next"><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
+      </ul>
+    </nav>
+
+    <br>
+    <br>
+
+    <h3 id = "tooltip" data-magellan-target = "tooltip">Tooltip</h3>
+    <p>What is a <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="2" title="It's this"> tooltip? </span></p>
+
+    <br>
+    <br>
+
+
+
+
+
+</body>
+</html>
