@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/css/foundation-float.css">
 </head>
 <body>
-
+    <h3> Top Bar </h3>
+    line 11-30, try clicking each link and it will bring you to its respective place.
     <div class = "top-bar">
       <div class = "top-bar-left">
         <ul class = "menu" data-magellan >
@@ -28,11 +29,15 @@
     </div>
 
     <h3 id= "button" data-magellan-target = "first"> Button </h3>
+    lines 33-36, these are buttons, color of button is determined by its class name.
+    <br>
     <a href="#" class="button"> This is a normal button </a>
     <a href="#" class="success button"> This is a "success" button </a>
     <a href="#" class="alert button"> This is an "alert" button </a>
     <br>
     <h5> Buttons sizes. Has sizes: tiny, small, large, and just 'button'</h5>
+    lines 40-44, these are buttons, size of button is determined by its class name
+    <br>
     <a href="#" class="button tiny"> This is a tiny button </a>
     <a href="#" class="button small"> This is a small button </a>
     <a href="#" class="button"> This is a button button </a>
@@ -42,6 +47,8 @@
     <br>
 
     <h3 id= "switches" data-magellan-target = "switches"> Switches </h3>
+    lines 51-59, these are switches, toggle switches have two settings, off or on.
+    <br>
     <h5> toggle </h5>
     <div class="switch">
         <input class="switch-input" id="toggleSwitch" type="checkbox" name="toggleSwitch">
@@ -51,6 +58,8 @@
         </label>
     </div>
     <h5> choice </h5>
+    lines 63-75, these are choice switches, only one can be 'on'
+    <br>
     <div class="switch">
         <input class="switch-input" id="choice1" type="radio" checked name="choices">
         <label class="switch-paddle" for="choice1"></label>
@@ -70,12 +79,16 @@
     <br>
 
     <h3 id = "tooltip" data-magellan-target = "tooltip">Tooltip</h3>
+    line 84, hover over tooltip
+    <br>
     <p>What is a <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="2" title="It's this"> tooltip? </span></p>
 
     <br>
     <br>
 
     <h3 id = "thumbnail" data-magellan-target = "thumbnail"> Thumbnails </h3>
+    lines 92-93, thumbnail
+    <br>
     <img class="thumbnail" src="penguin.png" alt="Photo of a penguin.">
     <img class="thumbnail" src="sad.jpg" alt="Photo of a sad." width="300" height="300">
 
@@ -83,6 +96,8 @@
     <br>
 
     <h3 id = "table" data-magellan-target = "table">Table</h3>
+    lines 100-123, table
+    <br>
     <table>
         <thead>
           <tr>
@@ -103,29 +118,33 @@
             <td>DATA</td>
             <td>DATA</td>
           </tr>
-          
+
         </tbody>
       </table>
 
     <br>
     <br>
-    
+
     <h3 id = "card" data-magellan-target = "card">Card</h3>
+    lines 131-140, a card. It's like an information box.
+    <br>
     <div class="card" style="width: 400px;">
         <div class="card-divider">
             Card Header
         </div>
         <div class="card-section">
           <h4>Card content</h4>
-          <p>Halvah pudding oat cake jelly beans. Dragée macaroon tart pastry powder croissant macaroon sesame snaps. 
+          <p>Halvah pudding oat cake jelly beans. Dragée macaroon tart pastry powder croissant macaroon sesame snaps.
               Lemon drops candy pie jelly beans chocolate tart chocolate.</p>
         </div>
     </div>
-    
+
     <br>
     <br>
 
     <h3 id = "pagination" data-magellan-target = "pagination">Pagination</h3>
+    lines 148-159, pagination, page selection
+    <br>
     <nav aria-label="Pagination">
       <ul class="pagination">
         <li class="pagination-previous"><a href="#" aria-label="Previous page">Previous <span class="show-for-sr">page</span></a></li>
@@ -138,6 +157,8 @@
         <li class="pagination-next"><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
       </ul>
     </nav>
-    
+
+
+
 </body>
 </html>
