@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Welcome to Bootstrap!</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <style>
+    #goto{
+      color:white;
+      text-decoration:none;
+    }
+    body{
+      background-color:black;
+      color:white;
+
+    }
+    pre{
+      background-color:gray;
+    }
+    #code{
+      background-color:gray;
+      color:black;
+    }
+    #show{
+      background-color:lightgray;
+      color:black;
+    }
+  </style>
+
+</head>
+<body>
+
+  <nav class="navbar fixed-top navbar-dark bg-dark">
+    <a href="#intro" id="goto">Inroduction</a>
+    <a href="#cont" id="goto">Containers</a>
+    <a href="#but" id="goto">Buttons</a>
+    <a href="#table" id="goto">Tables</a>
+  </nav>
+
+<div class="container">
+  <div id="intro">
+    <br>
+    <br>
+    <h1>Welcome to Bootstrap!</h1>
+    <h3>By what</h3>
+    <p>To start off make sure you have the following link in your head tag:</p>
+    <pre>
+      <xmp><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></xmp>
+    </pre>
+  </div>
+
+  <div id="cont">
+    <br>
+    <h3>Containers</h3>
+    <p>Containers are extremely usefull in bootstrap. They create a clean and
+      ordered display on sites. Everything here except for the navigation bar is
+      in a container. If you notice, containers even out the amount of content you have
+      per line without you having to do any other work.
+      <br>
+      Below is a container we created and below that is code for it:
+    </p>
+    <div class="container" id= "show">
+      <div class="row">
+        <div class="col">
+          This
+        </div>
+        <div class="col">
+           Goes
+        </div>
+        <div class="col">
+          Left
+        </div>
+        <div class="col">
+          To
+        </div>
+        <div class="col">
+          Right
+        </div>
+      </div>
+    </div>
+    <xmp id="code">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            This
+          </div>
+          <div class="col">
+             Goes
+          </div>
+          <div class="col">
+            Left
+          </div>
+          <div class="col">
+            To
+          </div>
+          <div class="col">
+            Right
+          </div>
+        </div>
+      </div>
+    </xmp>
+  </div>
+  <div class="container">
+    <p>The maximum number of columns on one row is 12. Any more than that
+      will cause the columns to spill into the next line!
+    </p>
+    <div class="row" id="show">
+      <div class="col">Col1</div>
+      <div class="col">Col2</div>
+      <div class="col">Col3</div>
+      <div class="col">Col4</div>
+      <div class="col">Col5</div>
+      <div class="col">Col6</div>
+      <div class="col">Col7</div>
+      <div class="col">Col8</div>
+      <div class="col">Col9</div>
+      <div class="col">Col10</div>
+      <div class="col">Col11</div>
+      <div class="col">Col12</div>
+    </div>
+  </div>
+
+  <div id="but">
+    <br>
+    <h3>Buttons</h3>
+    <p>Buttons! Buttons! BUTTOOOOOOONS! Bootstrap makes creating nice aesthetic
+      buttons very easy. If you look at the code below, all you have to do
+      is replace the 0000 with the names on the buttons. Each name on the buttons
+      mean a specific button type.
+      <br>
+    </p>
+
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+
+    <xmp id="code">
+      <button type="button" class="btn btn-0000"></button>
+    </xmp>
+
+    <br>
+    <p>
+        There are other types of buttons too! Like disabled and outline buttons
+        <br>
+    </p>
+
+    <button type="button" class="btn btn-primary" disabled>Disabled</button>
+    <button type="button" class="btn btn-outline-primary">Outline</button>
+
+    <xmp id="code">
+      <button type="button" class="btn btn-primary" disabled>Disabled</button>
+      <button type="button" class="btn btn-outline-primary">Outline</button>
+    </xmp>
+  </div>
+
+  <div id="table">
+    <h3>Tables</h3>
+    <p>With bootstrap making tables is super easy and customizable!
+        <br>
+        Look below for examples and code:
+    </p>
+
+    <div id="show">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">col1</th>
+            <th scope="col">col2</th>
+            <th scope="col">col3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Bold Hi</th>
+            <td>Hi</td>
+            <td>Hi</td>
+
+          </tr>
+          <tr>
+            <th scope="row">Bold Hi</th>
+            <td>Bye</td>
+            <td>Bye</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <xmp id="code">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">col1</th>
+          <th scope="col">col2</th>
+          <th scope="col">col3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Bold Hi</th>
+          <td>Hi</td>
+          <td>Hi</td>
+
+        </tr>
+        <tr>
+          <th scope="row">Bold Hi</th>
+          <td>Bye</td>
+          <td>Bye</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </xmp>
+
+</div>
+
+
+</body>
+
+
+</html>
