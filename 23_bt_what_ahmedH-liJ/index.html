@@ -1,3 +1,10 @@
+<!-- 
+Team what -- Hasif Ahmed, Johnson Li
+SoftDev1 pd8
+K23 -- How the Other Half Lives
+2018-11-11
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,10 +26,10 @@
     pre{
       background-color:gray;
     }
-    #code{
+    /* #code{
       background-color:gray;
       color:black;
-    }
+    } */
     #show{
       background-color:lightgray;
       color:black;
@@ -33,14 +40,16 @@
 <body>
 
   <nav class="navbar fixed-top navbar-dark bg-dark">
-    <a href="#intro" id="goto">Inroduction</a>
+    <a href="#home" id="goto">Inroduction</a>
     <a href="#cont" id="goto">Containers</a>
     <a href="#but" id="goto">Buttons</a>
+    <a href="#media" id="goto">Media</a>
+    <a href="#alerts" id="goto">Alerts</a>
     <a href="#table" id="goto">Tables</a>
   </nav>
 
 <div class="container">
-  <div id="intro">
+  <div id="home">
     <br>
     <br>
     <h1>Welcome to Bootstrap!</h1>
@@ -133,9 +142,11 @@
     </p>
 
     <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
     <button type="button" class="btn btn-warning">Warning</button>
     <button type="button" class="btn btn-danger">Danger</button>
     <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-info">Info</button>
     <button type="button" class="btn btn-light">Light</button>
     <button type="button" class="btn btn-dark">Dark</button>
 
@@ -156,6 +167,49 @@
       <button type="button" class="btn btn-primary" disabled>Disabled</button>
       <button type="button" class="btn btn-outline-primary">Outline</button>
     </xmp>
+  </div>
+
+  <div id="media">
+    <h3>Media</h3>
+    Bootstrap makes formatting media and text easy. The code below is how you would create the example below.
+    <br>
+    The 3 in "mr-3" is how far the text is from the picture.
+    <xmp>
+      <div class="media">
+      <img class="mr-3" src="penguin.png" alt="penguin">
+      <div class="media-body">
+        <h3> PENGUIN </h3>
+        This is a penguin.
+      </div>
+
+    </div>
+
+    </xmp>
+    <div class="media">
+      <img class="mr-3" src="penguin.png" alt="penguin">
+      <div class="media-body">
+        <h3> PENGUIN </h3>
+        This is a penguin.
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div id="alerts">
+    <h3>Alerts</h3>
+    Bootstrap makes it easy to create alerts to the user. They have the same types as buttons (primary, secondary...)
+    <br>
+    Ex:
+    <xmp>
+        <div class="alert alert-primary" role="alert">primary alert</div>
+    </xmp>
+
+    <div class="alert alert-primary" role="alert">primary alert</div>
+    <div class="alert alert-secondary" role="alert">secondary alert</div>
+    <div class="alert alert-success" role="alert">success alert</div>
+    <div class="alert alert-danger" role="alert">danger alert</div>
+    <div class="alert alert-warning" role="alert">warning alert</div>
   </div>
 
   <div id="table">
