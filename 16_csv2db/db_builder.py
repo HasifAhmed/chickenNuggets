@@ -16,17 +16,12 @@ c = db.cursor()               #facilitate db ops
 #INSERT YOUR POPULATE CODE IN THIS ZONE
 
 def createtable(filename, tablename,header):
-    #creating the initial exec statement: declaring table name, columns and column definitions -------
-    
-    #--------------------------------------------------------------------------------------------------
+
 
     #executing row statements--------------------------------------------------------------------------
     with open(filename) as csvfile:
         readfile = csv.DictReader(csvfile)
-        reader = csv.reader(csvfile)
-        header = {}
-        for row in reader:
-            
+
         command = "CREATE TABLE " + tablename + " ("
         for columndef in header:
             command += columndef + "BLOB" + ","
@@ -34,7 +29,6 @@ def createtable(filename, tablename,header):
         command += ")"
         #print(command); #for testing
         c.execute(command)
-        
         
         for row in readfile:
             #print (row['code']) #testing
