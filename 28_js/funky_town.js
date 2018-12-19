@@ -17,7 +17,7 @@ var gcd = function(a,b){
 	return a;
     }
 
-    g = 0;
+    var g = 0;
     if(a < b){
 	smaller = a;
     } else {
