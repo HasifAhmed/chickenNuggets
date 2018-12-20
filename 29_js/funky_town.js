@@ -1,8 +1,8 @@
 // Team extends Everything
-// Hasif Ahmed and Thomas Zhao
+// Hasif Ahmed and Aleksandra
 // SoftDev1 pd8
-// K28 -- Sequential Progression
-// 2018-12-18
+// K29 -- Sequential Progression II: Electric Boogaloo
+// 2018-12-20
 
 
 var fibonacci = function(n){
@@ -12,7 +12,6 @@ var fibonacci = function(n){
 	return fibonacci(n-1) + fibonacci(n-2);
     }
 }
-var notfibonacci = Object.create(fibonacci());
 var gcd = function(a,b){
     if(a == b){
 	return a;
@@ -43,6 +42,32 @@ var randomStudent = function(){
     return students[randint];
 }
 
+var displayfib = () => {
+    var results = fibonacci(2);
+    console.log(results);
+    document.getElementById('fib_res').innerHTML = results;
+};
+
+var displayrs = () => {
+    var results = randomStudent();
+    console.log(results);
+    document.getElementById('randstu_res').innerHTML = results;
+};
+
+var displaygcd = () => {
+    var results = gcd(100,90);
+    console.log(results);
+    document.getElementById('gcd_res').innerHTML = results;
+};
+
 var fibbut = document.getElementById("fib");
-console.log(fibbut);
-fibbut.addEventListener('click', notfibonacci(2));
+//console.log(fibbut);
+fibbut.addEventListener('click', displayfib);
+
+var stud = document.getElementById("randstu");
+//console.log(stud);
+stud.addEventListener('click', displayrs);
+
+var great = document.getElementById("gcd");
+//console.log(great);
+great.addEventListener('click', displaygcd);
